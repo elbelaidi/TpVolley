@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F4F8"
+    android:fillViewport="true"
+    tools:context=".AddEtudiant">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ajouter un étudiant"
+            android:textSize="26sp"
+            android:textColor="#1E1E2F"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="24dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:elevation="4dp">
+
+            <TextView
+                android:text="Nom"
+                android:textStyle="bold"
+                android:textColor="#333"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/nomEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Ex: Lahbari"
+                android:padding="12dp"
+                android:layout_marginBottom="16dp"
+                android:textColor="#000" />
+
+            <TextView
+                android:text="Prénom"
+                android:textStyle="bold"
+                android:textColor="#333"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/prenomEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Ex: Mohamed"
+                android:padding="12dp"
+                android:layout_marginBottom="16dp"
+                android:textColor="#000" />
+
+            <!-- DATE DE NAISSANCE -->
+            <TextView
+                android:text="Date de naissance"
+                android:textStyle="bold"
+                android:textColor="#333"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:id="@+id/dateNaissanceTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:paddingStart="12dp"
+                    android:text="Sélectionner une date"
+                    android:textColor="#000" />
+
+                <Button
+                    android:id="@+id/selectDateButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:text="Choisir"
+                    android:layout_marginStart="8dp"
+                    android:backgroundTint="#48cdcd"
+                android:textColor="#fff" />
+            </LinearLayout>
+
+            <!-- SEXE -->
+            <TextView
+                android:text="Sexe"
+                android:textStyle="bold"
+                android:textColor="#333"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <RadioGroup
+                android:id="@+id/sexeRadioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="8dp">
+
+                <RadioButton
+                    android:id="@+id/hommeRadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Homme"
+                    android:textColor="#1E1E2F" />
+
+                <RadioButton
+                    android:id="@+id/femmeRadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Femme"
+                    android:layout_marginStart="24dp"
+                    android:textColor="#1E1E2F" />
+            </RadioGroup>
+
+            <TextView
+                android:text="Ville"
+                android:textStyle="bold"
+                android:textColor="#333"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Spinner
+                android:id="@+id/villeSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:text="Photo"
+                android:textStyle="bold"
+                android:textColor="#333"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp" />
+
+            <ImageView
+                android:id="@+id/photoImageView"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_person_placeholder"
+                android:layout_marginBottom="8dp" />
+
+            <Button
+                android:id="@+id/choosePhotoButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Choisir une photo"
+                android:layout_gravity="center"
+                android:backgroundTint="#48cdcd"
+            android:textColor="#fff" />
+
+            <Button
+                android:id="@+id/ajouterButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ajouter"
+                android:layout_marginTop="24dp"
+                android:backgroundTint="#48cdcd"
+            android:textColor="#fff"
+            android:textStyle="bold" />
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
